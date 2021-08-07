@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<table>
+    <thead>
+    {% for column in columns %}
+    <th>{{ column }}</th>
+    {% endfor %}
+    </thead>
+    <tbody>
+    {% for i in items %}
+    <tr>
+    {% for j in i %}
+        <td>{{ j }}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<p>Страница {{ page }}</p>
+<form action="#" id="form" form="form__body" method="POST">
+    <p><input type="submit" name="back_button" value="Назад"> <input type="submit" name="next_button" value="Вперёд"></p>
+    <p><input type="submit" name="to_main_button" value="На главную"></p>
+</form>
+</body>
+</html>
